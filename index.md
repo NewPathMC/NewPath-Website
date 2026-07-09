@@ -293,12 +293,7 @@ permalink: /
                Ersetze oben YOUTUBE_LINK_HIER_EINFÜGEN durch deinen YouTube-Link.
                Möglich sind z. B. normale YouTube-Links oder youtube-nocookie-Embed-Links. -->
           <div class="np-main-theme-copy">
-            <p class="np-card-kicker">Main Theme</p>
-            <h4>Klang von Echoes of the Wild</h4>
-            <p>
-              Das offizielle Main Theme begleitet den Neustart von NewPath:
-              ruhig, geheimnisvoll und voller Aufbruchsstimmung.
-            </p>
+            <h4>NewPath Main Theme</h4>
           </div>
 
           <div class="np-main-theme-player" data-np-main-theme-frame>
