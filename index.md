@@ -301,7 +301,6 @@ permalink: /
               <span class="np-main-theme-play-icon" aria-hidden="true"></span>
               <span>Main Theme abspielen</span>
             </button>
-            <p class="np-main-theme-hint">YouTube wird erst nach deinem Klick geladen.</p>
             <p class="np-main-theme-missing">YouTube-Link ist noch nicht gesetzt.</p>
           </div>
         </div>
