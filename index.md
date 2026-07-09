@@ -275,13 +275,41 @@ permalink: /
       </article>
 
       <article class="np-history-tab-panel np-history-tab-panel-q42026 np-history-tab-panel-future">
-        <p class="np-card-kicker">Nächste Ära</p>
-        <h3>NewPath – Echoes of the Wild</h3>
-        <p>
-          Modpack und Konzept werden komplett neu gedacht. NewPath entsteht in
-          Minecraft 26.1.2 von Grund auf neu – atmosphärischer, klarer und
-          konsequenter als zuvor.
-        </p>
+        <div class="np-history-tab-copy">
+          <p class="np-card-kicker">Nächste Ära</p>
+          <h3>NewPath – Echoes of the Wild</h3>
+          <p class="np-history-panel-text">
+            Modpack und Konzept werden komplett neu gedacht. NewPath entsteht in
+            Minecraft 26.1.2 von Grund auf neu – atmosphärischer, klarer und
+            konsequenter als zuvor.
+          </p>
+        </div>
+
+        <div
+          class="np-main-theme-card"
+          data-np-main-theme
+          data-np-main-theme-url="https://youtu.be/_BoT_jZvq5A">
+          <!-- PLATZHALTER: Hier deinen YouTube-Link einfügen.
+               Ersetze oben YOUTUBE_LINK_HIER_EINFÜGEN durch deinen YouTube-Link.
+               Möglich sind z. B. normale YouTube-Links oder youtube-nocookie-Embed-Links. -->
+          <div class="np-main-theme-copy">
+            <p class="np-card-kicker">Main Theme</p>
+            <h4>Klang von Echoes of the Wild</h4>
+            <p>
+              Das offizielle Main Theme begleitet den Neustart von NewPath:
+              ruhig, geheimnisvoll und voller Aufbruchsstimmung.
+            </p>
+          </div>
+
+          <div class="np-main-theme-player" data-np-main-theme-frame>
+            <button class="np-main-theme-play-button" type="button" data-np-main-theme-load>
+              <span class="np-main-theme-play-icon" aria-hidden="true"></span>
+              <span>Main Theme abspielen</span>
+            </button>
+            <p class="np-main-theme-hint">YouTube wird erst nach deinem Klick geladen.</p>
+            <p class="np-main-theme-missing">YouTube-Link ist noch nicht gesetzt.</p>
+          </div>
+        </div>
       </article>
     </div>
   </div>
