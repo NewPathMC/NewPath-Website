@@ -22,7 +22,7 @@ permalink: /modpack-hilfe.html
 
   <div class="echo-page-content">
     <p class="echo-page-kicker">ECHO – Der Wegbegleiter</p>
-    <h2>Modpack-Hilfe für Einstieg, Technik und einzelne Mods.</h2>
+    <h2>Modpack-Hilfe für Einstieg, Technik und einzelne Mods. [WIP]</h2>
     <p>
       Hier sammelt ECHO alle wichtigen Hilfen rund um NewPath: Installation, RAM-Zuweisung,
       Voice Chat, typische Startprobleme und später auch kurze Guides zu einzelnen Mods.
