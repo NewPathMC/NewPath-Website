@@ -46,32 +46,29 @@
   };
 
   document.querySelectorAll("[data-np-main-theme]").forEach((card) => {
-    const button = card.querySelector("[data-np-main-theme-load]");
     const frame = card.querySelector("[data-np-main-theme-frame]");
     const embedUrl = buildEmbedUrl(card.dataset.npMainThemeUrl);
 
-    if (!button || !frame) {
+    if (!frame) {
       return;
     }
 
-    button.addEventListener("click", () => {
-      if (!embedUrl) {
-        card.classList.add("is-missing-url");
-        return;
-      }
+    if (!embedUrl) {
+      card.classList.add("is-missing-url");
+      return;
+    }
 
-      const separator = embedUrl.includes("?") ? "&" : "?";
-      const iframe = document.createElement("iframe");
+    const separator = embedUrl.includes("?") ? "&" : "?";
+    const iframe = document.createElement("iframe");
 
-      iframe.src = `${embedUrl}${separator}autoplay=1&rel=0`;
-      iframe.title = "NewPath – Echoes of the Wild Main Theme";
-      iframe.loading = "lazy";
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
+    iframe.src = `${embedUrl}${separator}rel=0`;
+    iframe.title = "NewPath – Echoes of the Wild Main Theme";
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
 
-      frame.replaceChildren(iframe);
-      card.classList.remove("is-missing-url");
-      card.classList.add("is-loaded");
-    }, { once: false });
+    frame.replaceChildren(iframe);
+    card.classList.remove("is-missing-url");
+    card.classList.add("is-loaded");
   });
 })();

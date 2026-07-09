@@ -296,11 +296,7 @@ permalink: /
             <h4>NewPath Main Theme</h4>
           </div>
 
-          <div class="np-main-theme-player" data-np-main-theme-frame>
-            <button class="np-main-theme-play-button" type="button" data-np-main-theme-load>
-              <span class="np-main-theme-play-icon" aria-hidden="true"></span>
-              <span>Main Theme abspielen</span>
-            </button>
+                    <div class="np-main-theme-player" data-np-main-theme-frame>
             <p class="np-main-theme-missing">YouTube-Link ist noch nicht gesetzt.</p>
           </div>
         </div>
