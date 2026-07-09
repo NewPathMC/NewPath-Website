@@ -52,3 +52,8 @@
 <script src="{{ site.baseurl }}/assets/js/np-rule-changes.js" defer></script>
 <script src="{{ site.baseurl }}/assets/js/back-to-top.js" defer></script>
 <script src="{{ site.baseurl }}/assets/js/np-gallery.js" defer></script>
+
+{% if jekyll.environment == "production" %}
+<script data-goatcounter="https://m4ximum.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{% endif %}
