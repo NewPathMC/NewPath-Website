@@ -14,7 +14,7 @@ permalink: /
     </h1>
 
     <div class="np-hero-highlight">
-      <strong>NewPath – Echoes of the Wild</strong> ist Ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung,
+      <strong>NewPath – Echoes of the Wild</strong> ist ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung,
         Gemeinschaft und entschleunigten Fortschritt.
     </div>
 

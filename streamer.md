@@ -76,7 +76,7 @@ permalink: /streamer.html
             <ol>
               <li>Öffne den NewPath-Discord.</li>
               <li>Öffne ein Support Ticket.</li>
-              <li>Teile deinen Twitch-Kanal mit und das du dich als Streamer eintragen lassen möchtest.</li>
+              <li>Teile deinen Twitch-Kanal mit und dass du dich als Streamer eintragen lassen möchtest.</li>
               <li>Warte, bis das Team deine Streamerrolle eingerichtet hat.</li>
             </ol>
           </div>

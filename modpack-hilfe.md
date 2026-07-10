@@ -388,7 +388,7 @@ permalink: /modpack-hilfe.html
         <!-- WICHTIGE HINWEISE -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Soll dein Claim einen bestimmten Namen haben, solltest du erste ein Team gründen und dann claimen.</p>
+          <p>Soll dein Claim einen bestimmten Namen haben, solltest du erst ein Team gründen und dann claimen.</p>
         </div>
 
         <!-- INHALT / ANLEITUNG -->
