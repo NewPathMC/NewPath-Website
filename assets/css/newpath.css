@@ -17978,6 +17978,14 @@ body.np-page-home .np-back-to-top {
 
 /* 96. Website-Release-Gate */
 
+html:has(body.np-website-release-page) {
+  overflow: hidden;
+}
+
+body.np-website-release-page {
+  overflow: hidden;
+}
+
 body.np-website-release-page {
   min-height: 100vh;
   margin: 0;
@@ -17993,6 +18001,7 @@ body.np-website-release-page {
 }
 
 .np-website-release-shell {
+  height: 100vh;
   min-height: 100vh;
   width: min(100% - 2rem, 76rem);
   margin: 0 auto;

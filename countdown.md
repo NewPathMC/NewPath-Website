@@ -4,7 +4,6 @@ title: Website-Release
 permalink: /countdown.html
 ---
 {% assign website_release = site.data["website-release"] %}
-<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
