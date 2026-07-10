@@ -12,6 +12,51 @@ permalink: /countdown.html
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/newpath.css">
+  <script data-np-website-release-early-countdown-check>
+    (function () {
+      var targetRaw = "{{ website_release.target_date }}".trim();
+      var homePath = "{{ website_release.home_path | relative_url }}";
+
+      function normalizePath(path) {
+        if (!path) return "/";
+        try {
+          path = new URL(path, window.location.origin).pathname;
+        } catch (_) {}
+
+        if (path.charAt(0) !== "/") {
+          path = "/" + path;
+        }
+
+        if (path.length > 1 && path.endsWith("/")) {
+          path = path.slice(0, -1);
+        }
+
+        return path || "/";
+      }
+
+      function releaseKey() {
+        return "np-website-release-done:" + targetRaw;
+      }
+
+      function storeRelease() {
+        if (!targetRaw) return;
+
+        try {
+          window.localStorage.setItem(releaseKey(), "1");
+        } catch (_) {}
+      }
+
+      if (!targetRaw) return;
+
+      var target = new Date(targetRaw);
+      if (Number.isNaN(target.getTime())) return;
+
+      if (Date.now() >= target.getTime()) {
+        storeRelease();
+        window.location.replace(normalizePath(homePath || "/"));
+      }
+    })();
+  </script>
 </head>
 <body class="np-website-release-page">
   <div

@@ -17978,6 +17978,11 @@ body.np-page-home .np-back-to-top {
 
 /* 96. Website-Release-Gate */
 
+html.np-release-gate-redirecting body {
+  visibility: hidden !important;
+}
+
+
 html:has(body.np-website-release-page) {
   width: 100%;
   height: 100%;

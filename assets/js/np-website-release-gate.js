@@ -1,5 +1,6 @@
 (() => {
   const pad = (value) => String(value).padStart(2, "0");
+  let redirected = false;
 
   const normalizePath = (path) => {
     if (!path) return "/";
@@ -21,6 +22,34 @@
     return path || "/";
   };
 
+  const getReleaseKey = (targetRaw) => `np-website-release-done:${targetRaw || ""}`;
+
+  const getStoredRelease = (targetRaw) => {
+    if (!targetRaw) return false;
+
+    try {
+      return window.localStorage.getItem(getReleaseKey(targetRaw)) === "1";
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const storeRelease = (targetRaw) => {
+    if (!targetRaw) return;
+
+    try {
+      window.localStorage.setItem(getReleaseKey(targetRaw), "1");
+    } catch (_) {
+      // storage can be blocked; ignore
+    }
+  };
+
+  const redirectOnce = (path) => {
+    if (redirected) return;
+    redirected = true;
+    window.location.replace(path);
+  };
+
   const setText = (root, selector, value) => {
     const element = root.querySelector(selector);
     if (element) {
@@ -38,14 +67,24 @@
     return target;
   };
 
-  const updateCountdownDisplays = (target) => {
-    document.querySelectorAll("[data-np-website-release-countdown]").forEach((root) => {
-      const rootTarget = parseTarget(root.dataset.npWebsiteReleaseTarget) || target;
-      const soonLabel = root.dataset.npWebsiteReleaseSoon || "Bald";
-      const doneLabel = root.dataset.npWebsiteReleaseDone || "Die Website ist freigeschaltet";
-      const heading = root.querySelector("h1");
+  const isReleased = (targetRaw, target) => {
+    if (!targetRaw || !target) return false;
 
-      if (!rootTarget) {
+    if (Date.now() >= target.getTime()) {
+      storeRelease(targetRaw);
+      return true;
+    }
+
+    return getStoredRelease(targetRaw);
+  };
+
+  const updateCountdownDisplays = (targetRaw, target) => {
+    document.querySelectorAll("[data-np-website-release-countdown]").forEach((root) => {
+      const rootTargetRaw = (root.dataset.npWebsiteReleaseTarget || targetRaw || "").trim();
+      const rootTarget = parseTarget(rootTargetRaw) || target;
+      const soonLabel = root.dataset.npWebsiteReleaseSoon || "Bald";
+
+      if (!rootTargetRaw || !rootTarget) {
         root.classList.add("is-waiting");
         const soonElement = root.querySelector("[data-np-website-soon]");
         if (soonElement) {
@@ -57,11 +96,9 @@
       const diff = rootTarget.getTime() - Date.now();
       root.classList.remove("is-waiting");
 
-      if (diff <= 0) {
+      if (diff <= 0 || getStoredRelease(rootTargetRaw)) {
         root.classList.add("is-finished");
-        if (heading) {
-          heading.textContent = doneLabel;
-        }
+        storeRelease(rootTargetRaw);
 
         setText(root, "[data-np-website-days]", "00");
         setText(root, "[data-np-website-hours]", "00");
@@ -86,32 +123,33 @@
   const config = document.querySelector("[data-np-website-release-config]");
   if (!config) return;
 
-  const target = parseTarget(config.dataset.npWebsiteReleaseTarget);
+  const targetRaw = (config.dataset.npWebsiteReleaseTarget || "").trim();
+  const target = parseTarget(targetRaw);
   const countdownPath = normalizePath(config.dataset.npWebsiteReleaseCountdownPath || "/countdown.html");
   const homePath = normalizePath(config.dataset.npWebsiteReleaseHomePath || "/");
   const currentPath = normalizePath(window.location.pathname);
   const isCountdownPage = currentPath === countdownPath;
 
-  const isReleased = target ? Date.now() >= target.getTime() : false;
-
-  if (!isReleased && !isCountdownPage) {
-    window.location.replace(countdownPath);
+  if (!isReleased(targetRaw, target) && !isCountdownPage) {
+    redirectOnce(countdownPath);
     return;
   }
 
-  if (isReleased && isCountdownPage) {
-    window.location.replace(homePath);
+  if (isReleased(targetRaw, target) && isCountdownPage) {
+    redirectOnce(homePath);
     return;
   }
 
-  updateCountdownDisplays(target);
-  window.setInterval(() => {
-    const currentlyReleased = target ? Date.now() >= target.getTime() : false;
+  updateCountdownDisplays(targetRaw, target);
 
-    updateCountdownDisplays(target);
+  const interval = window.setInterval(() => {
+    const releasedNow = isReleased(targetRaw, target);
 
-    if (currentlyReleased && normalizePath(window.location.pathname) === countdownPath) {
-      window.location.replace(homePath);
+    updateCountdownDisplays(targetRaw, target);
+
+    if (releasedNow && normalizePath(window.location.pathname) === countdownPath) {
+      window.clearInterval(interval);
+      redirectOnce(homePath);
     }
   }, 1000);
 })();
