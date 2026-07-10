@@ -1,7 +1,7 @@
 # Welt-Downloads für die Seite "Server & Welt".
 #
 # Die Welt-ZIP-Dateien sollen NICHT im Website-Repo liegen.
-# Trage hier externe Download-Links ein, z. B. Google Drive, GitHub Releases oder einen anderen Hoster.
+# Trage hier externe Download-Links ein, z. B. Google Drive.
 #
 # Solange items leer ist, zeigt die Website automatisch einen leeren Archivbereich.
 #
@@ -9,14 +9,10 @@
 #
 # items:
 #   - title: "NewPath – Beyond Lands"
-#     project: "NewPath – Beyond Lands"
-#     description: "Archivierter Weltstand des Beyond-Lands-Projekts."
 #     world_date: "05.12.2025"
 #     modpack_version: "NewPath – Beyond Lands 5.0.x"
-#     minecraft_neoforge: "Minecraft 1.21.1 / NeoForge x.x.x"
 #     file_size: "4,8 GB"
 #     status: "Download verfügbar"
-#     host: "Google Drive"
 #     available: true
 #     button_label: "Welt herunterladen"
 #     download_url: "https://drive.google.com/DEIN-LINK"

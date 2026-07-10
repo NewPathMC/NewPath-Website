@@ -17632,8 +17632,7 @@ body.np-page-home .np-back-to-top {
   line-height: 1.55;
 }
 
-.np-world-downloads-status,
-.np-world-download-source {
+.np-world-downloads-status {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -17685,18 +17684,9 @@ body.np-page-home .np-back-to-top {
   line-height: 1.12;
 }
 
-.np-world-download-description,
-.np-world-download-empty p {
-  max-width: 64rem;
-  margin: 0;
-  color: rgba(245, 234, 220, 0.80);
-  font-size: 0.9rem;
-  line-height: 1.52;
-}
-
 .np-world-download-meta {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.5rem;
   margin: 0;
 }
@@ -17777,6 +17767,14 @@ body.np-page-home .np-back-to-top {
     linear-gradient(180deg, rgba(9, 34, 44, 0.58), rgba(2, 13, 20, 0.86));
 }
 
+.np-world-download-empty p {
+  max-width: 64rem;
+  margin: 0;
+  color: rgba(245, 234, 220, 0.80);
+  font-size: 0.9rem;
+  line-height: 1.52;
+}
+
 .np-world-download-note {
   margin: 0;
   padding: 0.72rem 0.85rem;
@@ -17804,8 +17802,7 @@ body.np-page-home .np-back-to-top {
     display: grid;
   }
 
-  .np-world-downloads-status,
-  .np-world-download-source {
+  .np-world-downloads-status {
     justify-self: start;
   }
 

@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 17:18 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 15:59 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 {% include wip_banner.html %}
@@ -141,17 +141,8 @@ permalink: /server.html
         {% for world in world_downloads %}
           <article class="np-world-download-card">
             <div class="np-world-download-card-head">
-              <div>
-                <p class="np-card-kicker">{{ world.project }}</p>
-                <h3>{{ world.title }}</h3>
-              </div>
-
-              <span class="np-world-download-source">
-                {{ world.host | default: "Externer Download" }}
-              </span>
+              <h3>{{ world.title }}</h3>
             </div>
-
-            <p class="np-world-download-description">{{ world.description }}</p>
 
             <dl class="np-world-download-meta">
               <div>
@@ -161,10 +152,6 @@ permalink: /server.html
               <div>
                 <dt>Modpack-Version</dt>
                 <dd>{{ world.modpack_version }}</dd>
-              </div>
-              <div>
-                <dt>Minecraft / NeoForge</dt>
-                <dd>{{ world.minecraft_neoforge }}</dd>
               </div>
               <div>
                 <dt>Dateigröße</dt>
@@ -183,7 +170,7 @@ permalink: /server.html
                   href="{{ world.download_url }}"
                   target="_blank"
                   rel="noopener">
-                  {{ world.button_label | default: "Download öffnen" }}
+                  {{ world.button_label | default: "Welt herunterladen" }}
                 </a>
               {% else %}
                 <span class="np-world-download-button np-world-download-button-disabled">Download folgt</span>
@@ -198,7 +185,7 @@ permalink: /server.html
         <h3>Noch keine Welt-Downloads eingetragen</h3>
         <p>
           Der Archivbereich ist vorbereitet. Sobald eine alte NewPath-Welt veröffentlicht wird,
-          erscheint sie hier als Download-Karte mit Projektstand, benötigter Modpack-Version und externem Link.
+          erscheint sie hier als Download-Karte mit Weltstand, benötigter Modpack-Version und externem Link.
         </p>
       </div>
     {% endif %}
