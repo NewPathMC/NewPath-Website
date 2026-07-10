@@ -10,6 +10,9 @@ permalink: /regelwerk.html
 <p class="np-last-updated">Zuletzt aktualisiert: 30.06.2026 16:56 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
+{% include wip_banner.html %}
+
+
 
 <section class="echo-page-box echo-page-box-rules">
   <div class="echo-page-image">

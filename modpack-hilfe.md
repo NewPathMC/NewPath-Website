@@ -9,6 +9,9 @@ permalink: /modpack-hilfe.html
 <p class="np-last-updated">Zuletzt aktualisiert: 09.07.2026 17:14 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
+{% include wip_banner.html %}
+
+
 <section class="echo-page-box echo-page-box-help">
   <div class="echo-page-image">
     <img
