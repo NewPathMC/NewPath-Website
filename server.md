@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 15:36 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 30.06.2026 15:25 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 {% include wip_banner.html %}
@@ -118,6 +118,106 @@ permalink: /server.html
         allowfullscreen>
       </iframe>
     </div>
+  </article>
+
+
+  <article class="np-server-dashboard-card np-world-downloads-card" id="welt-downloads">
+    <div class="np-world-downloads-head">
+      <div>
+        <p class="np-card-kicker">Welt-Archiv</p>
+        <h2>Welt-Downloads</h2>
+        <p>
+          Hier werden zukünftig archivierte NewPath-Welten bereitgestellt. Zu jedem Download findest du
+          den passenden Projektstand, das Datum des Weltstands und die benötigte Modpack-Version.
+        </p>
+      </div>
+
+      <span class="np-world-downloads-status">In Vorbereitung</span>
+    </div>
+
+    <!-- Vorlage für spätere Welt-Downloads:
+    <article class="np-world-download-item">
+      <div class="np-world-download-main">
+        <h3>Projektname</h3>
+        <p>Kurzer Hinweis zur archivierten Welt.</p>
+      </div>
+
+      <dl class="np-world-download-meta">
+        <div>
+          <dt>Projekt</dt>
+          <dd>NewPath – Projektname</dd>
+        </div>
+        <div>
+          <dt>Weltstand</dt>
+          <dd>TT.MM.JJJJ</dd>
+        </div>
+        <div>
+          <dt>Benötigte Modpack-Version</dt>
+          <dd>Version</dd>
+        </div>
+        <div>
+          <dt>Minecraft / NeoForge</dt>
+          <dd>Minecraft-Version / NeoForge-Version</dd>
+        </div>
+        <div>
+          <dt>Dateigröße</dt>
+          <dd>folgt</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Download verfügbar</dd>
+        </div>
+      </dl>
+
+      <a class="np-world-download-button" href="#" download>Welt herunterladen</a>
+    </article>
+    -->
+
+    <div class="np-world-download-list">
+      <article class="np-world-download-item np-world-download-item-placeholder">
+        <div class="np-world-download-main">
+          <h3>Archivierte Welten folgen</h3>
+          <p>
+            Aktuell sind noch keine Welt-Downloads verfügbar. Ältere Welten werden nach Abschluss
+            der jeweiligen Projektphase hier archiviert.
+          </p>
+        </div>
+
+        <dl class="np-world-download-meta">
+          <div>
+            <dt>Projekt</dt>
+            <dd>folgt</dd>
+          </div>
+          <div>
+            <dt>Weltstand</dt>
+            <dd>folgt</dd>
+          </div>
+          <div>
+            <dt>Benötigte Modpack-Version</dt>
+            <dd>folgt</dd>
+          </div>
+          <div>
+            <dt>Minecraft / NeoForge</dt>
+            <dd>folgt</dd>
+          </div>
+          <div>
+            <dt>Dateigröße</dt>
+            <dd>folgt</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>In Vorbereitung</dd>
+          </div>
+        </dl>
+
+        <span class="np-world-download-button np-world-download-button-disabled">Download folgt</span>
+      </article>
+    </div>
+
+    <p class="np-world-download-note">
+      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
+      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
+    </p>
   </article>
 </section>
 

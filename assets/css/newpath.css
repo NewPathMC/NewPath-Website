@@ -17599,3 +17599,192 @@ body.np-page-home .np-back-to-top {
     font-size: 0.82rem;
   }
 }
+
+/* 94. Server & Welt: Welt-Downloads */
+
+.np-world-downloads-card {
+  display: grid;
+  gap: clamp(0.9rem, 1.6vw, 1.25rem);
+  overflow: hidden;
+}
+
+.np-world-downloads-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.np-world-downloads-head h2 {
+  margin: 0 0 0.35rem;
+  color: var(--np-type-title, #f4cf7f);
+  font-family: var(--np-font-heading);
+  font-size: clamp(1.3rem, 1.8vw, 1.75rem);
+  line-height: 1.08;
+}
+
+.np-world-downloads-head p:not(.np-card-kicker) {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--np-type-body, rgba(245, 234, 220, 0.84));
+  font-size: clamp(0.86rem, 0.96vw, 0.98rem);
+  line-height: 1.55;
+}
+
+.np-world-downloads-status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.85rem;
+  padding: 0.28rem 0.68rem;
+  border: 1px solid rgba(236, 183, 110, 0.40);
+  border-radius: 999px;
+  color: var(--np-gold-soft, #ecb76e);
+  background: rgba(236, 183, 110, 0.10);
+  font-family: var(--np-font-label);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.np-world-download-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.np-world-download-item {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.9fr) minmax(0, 1.35fr) auto;
+  gap: clamp(0.85rem, 1.5vw, 1.15rem);
+  align-items: center;
+  padding: clamp(0.9rem, 1.4vw, 1.15rem);
+  border: 1px solid rgba(72, 122, 146, 0.36);
+  border-radius: 0.68rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.075), transparent 14rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.56), rgba(4, 18, 25, 0.82));
+  box-shadow: inset 0 0 24px rgba(0, 230, 246, 0.025);
+}
+
+.np-world-download-item-placeholder {
+  border-style: dashed;
+}
+
+.np-world-download-main h3 {
+  margin: 0 0 0.35rem;
+  color: var(--np-gold-soft, #ecb76e);
+  font-family: var(--np-font-heading);
+  font-size: clamp(1.02rem, 1.18vw, 1.24rem);
+  line-height: 1.12;
+}
+
+.np-world-download-main p {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.76);
+  font-size: 0.86rem;
+  line-height: 1.48;
+}
+
+.np-world-download-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.np-world-download-meta div {
+  min-width: 0;
+  padding: 0.52rem 0.58rem;
+  border: 1px solid rgba(64, 116, 138, 0.34);
+  border-radius: 0.5rem;
+  background: rgba(0, 9, 15, 0.24);
+}
+
+.np-world-download-meta dt {
+  margin: 0 0 0.18rem;
+  color: var(--np-cyan, #00e6f6);
+  font-family: var(--np-font-label);
+  font-size: 0.58rem;
+  font-weight: 950;
+  letter-spacing: 0.07em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.np-world-download-meta dd {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.90);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.np-world-download-button {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0.55rem 0.82rem;
+  border: 1px solid rgba(0, 230, 246, 0.34);
+  border-radius: 999px;
+  color: var(--np-cyan, #00e6f6);
+  background: rgba(0, 230, 246, 0.08);
+  font-family: var(--np-font-label);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.045em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.np-world-download-button:not(.np-world-download-button-disabled):hover {
+  color: #f2ffff;
+  border-color: rgba(0, 230, 246, 0.58);
+  background: rgba(0, 230, 246, 0.14);
+}
+
+.np-world-download-button-disabled {
+  cursor: not-allowed;
+  opacity: 0.66;
+  filter: saturate(0.75);
+}
+
+.np-world-download-note {
+  margin: 0;
+  padding: 0.72rem 0.85rem;
+  border-left: 3px solid rgba(236, 183, 110, 0.72);
+  border-radius: 0.52rem;
+  color: rgba(245, 234, 220, 0.76);
+  background: rgba(236, 183, 110, 0.075);
+  font-size: 0.82rem;
+  line-height: 1.48;
+}
+
+@media (max-width: 78rem) {
+  .np-world-download-item {
+    grid-template-columns: 1fr;
+  }
+
+  .np-world-download-button {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 46rem) {
+  .np-world-downloads-head {
+    display: grid;
+  }
+
+  .np-world-downloads-status {
+    justify-self: start;
+  }
+
+  .np-world-download-meta {
+    grid-template-columns: 1fr;
+  }
+}
