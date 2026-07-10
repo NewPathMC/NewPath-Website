@@ -8,9 +8,8 @@
 # Wenn target_date leer bleibt, zeigt die Website statt Zahlen automatisch "Bald" an.
 
 enabled: true
-kicker: "Serverstart"
-title: "Echoes of the Wild startet in"
-target_date: "2026-08-01T18:00:00+02:00"
-date_label: "Geplanter Start: August 2026"
-no_date_label: "Bald"
+title: "Serverstart"
+target_date: ""
+date_label: "Startdatum folgt"
+no_date_label: "soon...."
 done_label: "Echoes of the Wild ist gestartet"
