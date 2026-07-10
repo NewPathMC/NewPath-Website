@@ -5,7 +5,7 @@
 # enabled: false
 #
 # Komplett aus der Website entfernen:
-# 1. In _includes/footer_custom.html diese Zeile löschen:
+# 1. In _includes/head_custom.html diese Zeile löschen:
 #    {% include website_release_gate.html %}
 # 2. Optional danach diese Dateien löschen:
 #    countdown.md
@@ -22,7 +22,7 @@
 # und schaltet nicht automatisch frei.
 
 enabled: true
-target_date: "2026-07-10T19:55:00+02:00"
+target_date: "2026-07-10T20:05:00+02:00"
 countdown_path: "/countdown.html"
 home_path: "/"
 kicker: "Website-Release"

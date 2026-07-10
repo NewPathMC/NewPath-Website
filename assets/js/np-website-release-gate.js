@@ -22,28 +22,6 @@
     return path || "/";
   };
 
-  const getReleaseKey = (targetRaw) => `np-website-release-done:${targetRaw || ""}`;
-
-  const getStoredRelease = (targetRaw) => {
-    if (!targetRaw) return false;
-
-    try {
-      return window.localStorage.getItem(getReleaseKey(targetRaw)) === "1";
-    } catch (_) {
-      return false;
-    }
-  };
-
-  const storeRelease = (targetRaw) => {
-    if (!targetRaw) return;
-
-    try {
-      window.localStorage.setItem(getReleaseKey(targetRaw), "1");
-    } catch (_) {
-      // storage can be blocked; ignore
-    }
-  };
-
   const redirectOnce = (path) => {
     if (redirected) return;
     redirected = true;
@@ -67,15 +45,8 @@
     return target;
   };
 
-  const isReleased = (targetRaw, target) => {
-    if (!targetRaw || !target) return false;
-
-    if (Date.now() >= target.getTime()) {
-      storeRelease(targetRaw);
-      return true;
-    }
-
-    return getStoredRelease(targetRaw);
+  const isReleased = (target) => {
+    return target ? Date.now() >= target.getTime() : false;
   };
 
   const updateCountdownDisplays = (targetRaw, target) => {
@@ -96,9 +67,8 @@
       const diff = rootTarget.getTime() - Date.now();
       root.classList.remove("is-waiting");
 
-      if (diff <= 0 || getStoredRelease(rootTargetRaw)) {
+      if (diff <= 0) {
         root.classList.add("is-finished");
-        storeRelease(rootTargetRaw);
 
         setText(root, "[data-np-website-days]", "00");
         setText(root, "[data-np-website-hours]", "00");
@@ -130,24 +100,17 @@
   const currentPath = normalizePath(window.location.pathname);
   const isCountdownPage = currentPath === countdownPath;
 
-  if (!isReleased(targetRaw, target) && !isCountdownPage) {
-    redirectOnce(countdownPath);
-    return;
-  }
+  updateCountdownDisplays(targetRaw, target);
 
-  if (isReleased(targetRaw, target) && isCountdownPage) {
+  if (isReleased(target) && isCountdownPage) {
     redirectOnce(homePath);
     return;
   }
 
-  updateCountdownDisplays(targetRaw, target);
-
   const interval = window.setInterval(() => {
-    const releasedNow = isReleased(targetRaw, target);
-
     updateCountdownDisplays(targetRaw, target);
 
-    if (releasedNow && normalizePath(window.location.pathname) === countdownPath) {
+    if (isReleased(target) && normalizePath(window.location.pathname) === countdownPath) {
       window.clearInterval(interval);
       redirectOnce(homePath);
     }

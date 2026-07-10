@@ -28,49 +28,28 @@
     return path || "/";
   }
 
-  function releaseKey() {
-    return "np-website-release-done:" + targetRaw;
-  }
-
-  function getStoredRelease() {
-    if (!targetRaw) return false;
-
+  function clearOldReleaseFlags() {
     try {
-      return window.localStorage.getItem(releaseKey()) === "1";
-    } catch (_) {
-      return false;
-    }
-  }
-
-  function storeRelease() {
-    if (!targetRaw) return;
-
-    try {
-      window.localStorage.setItem(releaseKey(), "1");
+      for (var i = window.localStorage.length - 1; i >= 0; i -= 1) {
+        var key = window.localStorage.key(i);
+        if (key && key.indexOf("np-website-release-done:") === 0) {
+          window.localStorage.removeItem(key);
+        }
+      }
     } catch (_) {}
   }
 
+  clearOldReleaseFlags();
+
   var currentPath = normalizePath(window.location.pathname);
   var countdown = normalizePath(countdownPath || "/countdown.html");
-  var home = normalizePath(homePath || "/");
   var target = targetRaw ? new Date(targetRaw) : null;
   var validTarget = target && !Number.isNaN(target.getTime());
-  var releasedByDate = validTarget ? Date.now() >= target.getTime() : false;
-  var released = releasedByDate || getStoredRelease();
-
-  if (releasedByDate) {
-    storeRelease();
-  }
+  var released = validTarget ? Date.now() >= target.getTime() : false;
 
   if (!released && currentPath !== countdown) {
     document.documentElement.classList.add("np-release-gate-redirecting");
     window.location.replace(countdown);
-    return;
-  }
-
-  if (released && currentPath === countdown) {
-    document.documentElement.classList.add("np-release-gate-redirecting");
-    window.location.replace(home);
   }
 })();
 </script>

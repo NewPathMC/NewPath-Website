@@ -34,25 +34,12 @@ permalink: /countdown.html
         return path || "/";
       }
 
-      function releaseKey() {
-        return "np-website-release-done:" + targetRaw;
-      }
-
-      function storeRelease() {
-        if (!targetRaw) return;
-
-        try {
-          window.localStorage.setItem(releaseKey(), "1");
-        } catch (_) {}
-      }
-
       if (!targetRaw) return;
 
       var target = new Date(targetRaw);
       if (Number.isNaN(target.getTime())) return;
 
       if (Date.now() >= target.getTime()) {
-        storeRelease();
         window.location.replace(normalizePath(homePath || "/"));
       }
     })();
@@ -98,6 +85,6 @@ permalink: /countdown.html
     </section>
   </main>
 
-  <script src="{{ site.baseurl }}/assets/js/np-website-release-gate.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/np-website-release-gate.js?v=20260710-2005-loopfix" defer></script>
 </body>
 </html>
