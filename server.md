@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 17:31 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 15:59 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 {% include wip_banner.html %}
@@ -136,6 +136,11 @@ permalink: /server.html
 
     {% assign world_downloads = site.data["world-downloads"].items | default: empty %}
 
+    <p class="np-world-download-note">
+      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
+      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
+    </p>
+
     {% if world_downloads.size > 0 %}
       <div class="np-world-download-list">
         {% for world in world_downloads %}
@@ -190,10 +195,6 @@ permalink: /server.html
       </div>
     {% endif %}
 
-    <p class="np-world-download-note">
-      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
-      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
-    </p>
   </article>
 </section>
 
