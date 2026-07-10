@@ -17845,12 +17845,19 @@ body.np-page-home .np-back-to-top {
 
 /* 95. Startseite: Modpack-/Serverstart-Countdown */
 
+.np-hero-release-countdown-slot {
+  grid-column: 3;
+  width: min(100%, 22rem);
+  align-self: center;
+  justify-self: start;
+  z-index: 2;
+}
+
 .np-release-countdown {
-  width: min(100%, 20.8rem);
+  width: 100%;
   display: grid;
   gap: 0.5rem;
-  margin-top: clamp(0.55rem, 1vw, 0.85rem);
-  padding: 0.72rem 0.78rem 0.76rem;
+  padding: 0.78rem 0.82rem 0.82rem;
   border: 1px solid rgba(0, 230, 246, 0.36);
   border-radius: 0.64rem;
   background:
@@ -17861,7 +17868,6 @@ body.np-page-home .np-back-to-top {
     inset 0 0 24px rgba(0, 230, 246, 0.035),
     0 12px 24px rgba(0, 0, 0, 0.22);
   text-align: center;
-  pointer-events: auto;
 }
 
 .np-release-countdown-kicker {
@@ -17918,12 +17924,34 @@ body.np-page-home .np-back-to-top {
   text-transform: uppercase;
 }
 
+.np-release-countdown-soon {
+  display: none;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(72, 122, 146, 0.36);
+  border-radius: 0.48rem;
+  color: rgba(245, 234, 220, 0.96);
+  background: rgba(0, 9, 15, 0.34);
+  font-family: var(--np-font-heading);
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
 .np-release-countdown-date {
   margin: 0;
   color: rgba(245, 234, 220, 0.66);
   font-size: 0.66rem;
   font-weight: 750;
   line-height: 1.25;
+}
+
+.np-release-countdown.is-waiting .np-release-countdown-grid {
+  display: none;
+}
+
+.np-release-countdown.is-waiting .np-release-countdown-soon {
+  display: block;
 }
 
 .np-release-countdown.is-finished {
@@ -17933,30 +17961,12 @@ body.np-page-home .np-back-to-top {
     linear-gradient(180deg, rgba(34, 24, 13, 0.74), rgba(0, 8, 14, 0.88));
 }
 
-.np-release-countdown.is-invalid .np-release-countdown-title::after {
-  content: " – Datum prüfen";
-  color: rgba(255, 166, 128, 0.92);
-}
-
-@media (min-width: 66.5rem) {
-  .np-hero-logo {
-    height: auto !important;
-    display: grid !important;
-    justify-items: center !important;
-    align-items: center !important;
-    gap: 0.58rem !important;
-  }
-
-  .np-hero-logo img {
-    width: clamp(235px, 17vw, 330px) !important;
-    height: clamp(235px, 17vw, 330px) !important;
-  }
-}
-
-@media (max-width: 66.499rem) {
-  .np-release-countdown {
+@media (max-width: 78rem) {
+  .np-hero-release-countdown-slot {
+    grid-column: 1 / -1;
     width: min(100%, 24rem);
-    margin-inline: auto;
+    justify-self: center;
+    margin-top: 0.5rem;
   }
 }
 

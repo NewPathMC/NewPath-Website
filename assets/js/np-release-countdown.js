@@ -1,34 +1,55 @@
 (() => {
   const pad = (value) => String(value).padStart(2, "0");
 
-  const updateCountdown = (root) => {
-    const targetRaw = root.dataset.npReleaseCountdownTarget;
-    const doneLabel = root.dataset.npReleaseCountdownDone || "Gestartet";
-    const target = new Date(targetRaw);
+  const setValue = (root, selector, value) => {
+    const element = root.querySelector(selector);
+    if (element) {
+      element.textContent = value;
+    }
+  };
 
-    const daysEl = root.querySelector("[data-np-countdown-days]");
-    const hoursEl = root.querySelector("[data-np-countdown-hours]");
-    const minutesEl = root.querySelector("[data-np-countdown-minutes]");
-    const secondsEl = root.querySelector("[data-np-countdown-seconds]");
+  const setWaitingState = (root) => {
+    const soonLabel = root.dataset.npReleaseCountdownSoon || "Bald";
+    root.classList.add("is-waiting");
+
+    const soonElement = root.querySelector("[data-np-countdown-soon]");
+    if (soonElement) {
+      soonElement.textContent = soonLabel;
+    }
+  };
+
+  const updateCountdown = (root) => {
+    const targetRaw = (root.dataset.npReleaseCountdownTarget || "").trim();
+    const doneLabel = root.dataset.npReleaseCountdownDone || "Gestartet";
     const titleEl = root.querySelector(".np-release-countdown-title");
 
+    if (!targetRaw) {
+      setWaitingState(root);
+      return;
+    }
+
+    const target = new Date(targetRaw);
+
     if (Number.isNaN(target.getTime())) {
-      root.classList.add("is-invalid");
+      setWaitingState(root);
       return;
     }
 
     const now = new Date();
     const diff = target.getTime() - now.getTime();
 
+    root.classList.remove("is-waiting");
+
     if (diff <= 0) {
       root.classList.add("is-finished");
       if (titleEl) {
         titleEl.textContent = doneLabel;
       }
-      if (daysEl) daysEl.textContent = "00";
-      if (hoursEl) hoursEl.textContent = "00";
-      if (minutesEl) minutesEl.textContent = "00";
-      if (secondsEl) secondsEl.textContent = "00";
+
+      setValue(root, "[data-np-countdown-days]", "00");
+      setValue(root, "[data-np-countdown-hours]", "00");
+      setValue(root, "[data-np-countdown-minutes]", "00");
+      setValue(root, "[data-np-countdown-seconds]", "00");
       return;
     }
 
@@ -38,10 +59,10 @@
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
 
-    if (daysEl) daysEl.textContent = String(days);
-    if (hoursEl) hoursEl.textContent = pad(hours);
-    if (minutesEl) minutesEl.textContent = pad(minutes);
-    if (secondsEl) secondsEl.textContent = pad(seconds);
+    setValue(root, "[data-np-countdown-days]", String(days));
+    setValue(root, "[data-np-countdown-hours]", pad(hours));
+    setValue(root, "[data-np-countdown-minutes]", pad(minutes));
+    setValue(root, "[data-np-countdown-seconds]", pad(seconds));
   };
 
   document.querySelectorAll("[data-np-release-countdown]").forEach((root) => {

@@ -40,40 +40,12 @@ permalink: /
       width="512"
       height="512"
       decoding="async">
-  
-    {% assign release_countdown = site.data["release-countdown"] %}
-    {% if release_countdown.enabled %}
-      <div
-        class="np-release-countdown"
-        data-np-release-countdown
-        data-np-release-countdown-target="{{ release_countdown.target_date }}"
-        data-np-release-countdown-done="{{ release_countdown.done_label | escape }}">
-        <p class="np-release-countdown-kicker">{{ release_countdown.kicker }}</p>
-        <strong class="np-release-countdown-title">{{ release_countdown.title }}</strong>
-
-        <div class="np-release-countdown-grid" aria-label="Countdown bis zum Serverstart">
-          <span>
-            <strong data-np-countdown-days>--</strong>
-            <small>Tage</small>
-          </span>
-          <span>
-            <strong data-np-countdown-hours>--</strong>
-            <small>Std</small>
-          </span>
-          <span>
-            <strong data-np-countdown-minutes>--</strong>
-            <small>Min</small>
-          </span>
-          <span>
-            <strong data-np-countdown-seconds>--</strong>
-            <small>Sek</small>
-          </span>
-        </div>
-
-        <p class="np-release-countdown-date">{{ release_countdown.date_label }}</p>
-      </div>
-    {% endif %}
   </div>
+
+  <div class="np-hero-release-countdown-slot">
+    {% include release_countdown.html %}
+  </div>
+
 </section>
 
 <section class="np-status-bar np-status-bar-v2 np-status-bar-showcase" aria-label="NewPath Kurzinfos">
