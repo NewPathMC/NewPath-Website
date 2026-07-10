@@ -17532,12 +17532,13 @@ body.np-page-home .np-back-to-top {
 
 .np-wip-banner-content {
   min-width: 0;
+  text-align: center;
 }
 
 .np-wip-banner-content strong {
   display: block;
   margin: 0 0 0.18rem;
-  color: #130f09;
+  color: #130f09 !important;
   font-family: var(--np-font-label, system-ui, sans-serif);
   font-size: clamp(1.05rem, 1.45vw, 1.42rem);
   font-weight: 950;
@@ -17549,8 +17550,8 @@ body.np-page-home .np-back-to-top {
 
 .np-wip-banner-content p {
   max-width: 58rem;
-  margin: 0;
-  color: rgba(18, 13, 7, 0.88);
+  margin: 0 auto;
+  color: #15100a !important;
   font-size: clamp(0.78rem, 0.92vw, 0.95rem);
   font-weight: 800;
   line-height: 1.42;
