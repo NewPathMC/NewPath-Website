@@ -17842,3 +17842,126 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* 95. Startseite: Modpack-/Serverstart-Countdown */
+
+.np-release-countdown {
+  width: min(100%, 20.8rem);
+  display: grid;
+  gap: 0.5rem;
+  margin-top: clamp(0.55rem, 1vw, 0.85rem);
+  padding: 0.72rem 0.78rem 0.76rem;
+  border: 1px solid rgba(0, 230, 246, 0.36);
+  border-radius: 0.64rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.14), transparent 9rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.10), transparent 8rem),
+    linear-gradient(180deg, rgba(4, 22, 30, 0.78), rgba(0, 8, 14, 0.88));
+  box-shadow:
+    inset 0 0 24px rgba(0, 230, 246, 0.035),
+    0 12px 24px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  pointer-events: auto;
+}
+
+.np-release-countdown-kicker {
+  margin: 0;
+  color: var(--np-cyan, #00e6f6);
+  font-family: var(--np-font-label);
+  font-size: 0.58rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.np-release-countdown-title {
+  display: block;
+  color: var(--np-gold-soft, #ecb76e);
+  font-family: var(--np-font-heading);
+  font-size: clamp(0.88rem, 1vw, 1.02rem);
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.np-release-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.34rem;
+}
+
+.np-release-countdown-grid span {
+  min-width: 0;
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.42rem 0.25rem;
+  border: 1px solid rgba(72, 122, 146, 0.36);
+  border-radius: 0.45rem;
+  background: rgba(0, 9, 15, 0.34);
+}
+
+.np-release-countdown-grid strong {
+  color: rgba(245, 234, 220, 0.96);
+  font-family: var(--np-font-heading);
+  font-size: clamp(0.95rem, 1.18vw, 1.18rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+.np-release-countdown-grid small {
+  color: rgba(0, 230, 246, 0.86);
+  font-family: var(--np-font-label);
+  font-size: 0.52rem;
+  font-weight: 950;
+  letter-spacing: 0.075em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.np-release-countdown-date {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.66);
+  font-size: 0.66rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.np-release-countdown.is-finished {
+  border-color: rgba(236, 183, 110, 0.48);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(236, 183, 110, 0.14), transparent 10rem),
+    linear-gradient(180deg, rgba(34, 24, 13, 0.74), rgba(0, 8, 14, 0.88));
+}
+
+.np-release-countdown.is-invalid .np-release-countdown-title::after {
+  content: " – Datum prüfen";
+  color: rgba(255, 166, 128, 0.92);
+}
+
+@media (min-width: 66.5rem) {
+  .np-hero-logo {
+    height: auto !important;
+    display: grid !important;
+    justify-items: center !important;
+    align-items: center !important;
+    gap: 0.58rem !important;
+  }
+
+  .np-hero-logo img {
+    width: clamp(235px, 17vw, 330px) !important;
+    height: clamp(235px, 17vw, 330px) !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-release-countdown {
+    width: min(100%, 24rem);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 34rem) {
+  .np-release-countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
