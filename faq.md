@@ -5,7 +5,7 @@ permalink: /faq/
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 16.06.2026 21:26 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 20:20 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 {% include wip_banner.html %}
