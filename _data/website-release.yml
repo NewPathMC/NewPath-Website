@@ -23,7 +23,7 @@
 
 enabled: true
 target_date: "2026-07-10T20:05:00+02:00"
-countdown_path: "/countdown.html"
+countdown_path: "/countdown/"
 home_path: "/"
 kicker: "Website-Release"
 title: "NewPath erwacht bald"

@@ -1,5 +1,5 @@
 // Öffnet verlinkte Akkordeons auf der Modpack-Hilfe automatisch.
-// Beispiel: /modpack-hilfe.html#whitelist-zugang
+// Beispiel: /modpack-hilfe/#whitelist-zugang
 (function () {
   function getHeaderOffset() {
     var header = document.querySelector(".site-header, .np-site-header, header");

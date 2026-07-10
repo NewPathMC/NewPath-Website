@@ -2,7 +2,7 @@
 layout: default
 title: Modpack Hilfe
 nav_order: 4
-permalink: /modpack-hilfe.html
+permalink: /modpack-hilfe/
 ---
 
 <!-- AUTO_UPDATED_START -->

@@ -2,7 +2,7 @@
 layout: default
 title: Server & Welt
 nav_order: 3
-permalink: /server.html
+permalink: /server/
 ---
 
 <!-- AUTO_UPDATED_START -->

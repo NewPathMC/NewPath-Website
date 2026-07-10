@@ -95,7 +95,7 @@
 
   const targetRaw = (config.dataset.npWebsiteReleaseTarget || "").trim();
   const target = parseTarget(targetRaw);
-  const countdownPath = normalizePath(config.dataset.npWebsiteReleaseCountdownPath || "/countdown.html");
+  const countdownPath = normalizePath(config.dataset.npWebsiteReleaseCountdownPath || "/countdown/");
   const homePath = normalizePath(config.dataset.npWebsiteReleaseHomePath || "/");
   const currentPath = normalizePath(window.location.pathname);
   const isCountdownPage = currentPath === countdownPath;

@@ -1,7 +1,7 @@
 ---
 title: Team
 nav_order: 6
-permalink: /team.html
+permalink: /team/
 ---
 
 <!-- AUTO_UPDATED_START -->

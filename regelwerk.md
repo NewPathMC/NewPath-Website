@@ -2,7 +2,7 @@
 layout: default
 title: Regeln
 nav_order: 2
-permalink: /regelwerk.html
+permalink: /regelwerk/
 ---
 
 

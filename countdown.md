@@ -1,7 +1,9 @@
 ---
 layout: null
 title: Website-Release
-permalink: /countdown.html
+permalink: /countdown/
+nav_exclude: true
+search_exclude: true
 ---
 {% assign website_release = site.data["website-release"] %}
 <html lang="de">

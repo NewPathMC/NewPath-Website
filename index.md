@@ -27,7 +27,7 @@ permalink: /
         <span class="np-server-copy-hero-icon np-discord-hero-icon" aria-hidden="true"></span>
         <span class="np-server-copy-hero-label">Discord beitreten</span>
       </a>
-      <a class="np-hero-secondary-button" href="{{ site.baseurl }}/regelwerk.html">Regelwerk lesen</a>
+      <a class="np-hero-secondary-button" href="{{ site.baseurl }}/regelwerk/">Regelwerk lesen</a>
       <p class="np-server-copy-hint">Whitelist über Discord erforderlich.</p>
     </div>
 
@@ -119,7 +119,7 @@ permalink: /
       <strong>Wobei brauchst du Hilfe?</strong>
     </div>
 
-    <a class="np-route-card np-route-card-primary np-route-card-featured" href="{{ site.baseurl }}/modpack-hilfe.html#whitelist-zugang">
+    <a class="np-route-card np-route-card-primary np-route-card-featured" href="{{ site.baseurl }}/modpack-hilfe/#whitelist-zugang">
       <span class="np-card-icon np-card-icon-green">▶</span>
       <span class="np-route-featured-content">
         <span class="np-route-badge">Empfohlen für neue Spieler</span>
@@ -134,21 +134,21 @@ permalink: /
       </span>
     </a>
 
-    <a class="np-route-card" href="{{ site.baseurl }}/regelwerk.html">
+    <a class="np-route-card" href="{{ site.baseurl }}/regelwerk/">
       <span class="np-card-icon np-card-icon-gold">§</span>
       <span class="np-route-title">Regeln ansehen</span>
       <span class="np-route-text">Was bei uns gilt.</span>
       <span class="np-route-link">Regelwerk →</span>
     </a>
 
-    <a class="np-route-card" href="{{ site.baseurl }}/faq.html">
+    <a class="np-route-card" href="{{ site.baseurl }}/faq/">
       <span class="np-card-icon np-card-icon-blue">?</span>
       <span class="np-route-title">Häufige Fragen</span>
       <span class="np-route-text">Version, Server und Ablauf.</span>
       <span class="np-route-link">FAQ öffnen →</span>
     </a>
 
-    <a class="np-route-card" href="{{ site.baseurl }}/modpack-hilfe.html#probleme-support">
+    <a class="np-route-card" href="{{ site.baseurl }}/modpack-hilfe/#probleme-support">
       <span class="np-card-icon np-card-icon-red">!</span>
       <span class="np-route-title">Problem lösen</span>
       <span class="np-route-text">Crash, RAM, Logs und Support.</span>

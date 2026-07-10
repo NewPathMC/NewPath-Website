@@ -1,6 +1,6 @@
 ---
 title: Geheime NewPath-Ente
-permalink: /ente.html
+permalink: /ente/
 nav_exclude: true
 search_exclude: true
 ---

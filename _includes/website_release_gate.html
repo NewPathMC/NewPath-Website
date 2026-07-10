@@ -42,7 +42,7 @@
   clearOldReleaseFlags();
 
   var currentPath = normalizePath(window.location.pathname);
-  var countdown = normalizePath(countdownPath || "/countdown.html");
+  var countdown = normalizePath(countdownPath || "/countdown/");
   var target = targetRaw ? new Date(targetRaw) : null;
   var validTarget = target && !Number.isNaN(target.getTime());
   var released = validTarget ? Date.now() >= target.getTime() : false;

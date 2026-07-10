@@ -1,7 +1,7 @@
 ---
 title: Streamer
 nav_order: 7
-permalink: /streamer.html
+permalink: /streamer/
 ---
 
 <!-- AUTO_UPDATED_START -->

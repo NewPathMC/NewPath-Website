@@ -37,13 +37,13 @@
 
     const links = [
       ["Startseite", baseUrl + "/"],
-      ["Regeln", baseUrl + "/regelwerk.html"],
-      ["Server & Welt", baseUrl + "/server.html"],
-      ["Modpack Hilfe", baseUrl + "/modpack-hilfe.html"],
-      ["FAQ", baseUrl + "/faq.html"],
-      ["Team", baseUrl + "/team.html"],
-      ["Streamer", baseUrl + "/streamer.html"],
-      ["Galerie", baseUrl + "/galerie.html"]
+      ["Regeln", baseUrl + "/regelwerk/"],
+      ["Server & Welt", baseUrl + "/server/"],
+      ["Modpack Hilfe", baseUrl + "/modpack-hilfe/"],
+      ["FAQ", baseUrl + "/faq/"],
+      ["Team", baseUrl + "/team/"],
+      ["Streamer", baseUrl + "/streamer/"],
+      ["Galerie", baseUrl + "/galerie/"]
     ];
 
     const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
@@ -88,13 +88,13 @@
 
         <nav class="np-mobile-menu" aria-label="Mobile Navigation">
           <a href="${baseUrl}/">Startseite</a>
-          <a href="${baseUrl}/regelwerk.html">Regeln</a>
-          <a href="${baseUrl}/server.html">Server & Welt</a>
-          <a href="${baseUrl}/modpack-hilfe.html">Modpack Hilfe</a>
-          <a href="${baseUrl}/faq.html">FAQ</a>
-          <a href="${baseUrl}/team.html">Team</a>
-          <a href="${baseUrl}/streamer.html">Streamer</a>
-          <a href="${baseUrl}/galerie.html">Galerie</a>
+          <a href="${baseUrl}/regelwerk/">Regeln</a>
+          <a href="${baseUrl}/server/">Server & Welt</a>
+          <a href="${baseUrl}/modpack-hilfe/">Modpack Hilfe</a>
+          <a href="${baseUrl}/faq/">FAQ</a>
+          <a href="${baseUrl}/team/">Team</a>
+          <a href="${baseUrl}/streamer/">Streamer</a>
+          <a href="${baseUrl}/galerie/">Galerie</a>
           <a href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">Discord beitreten</a>
         </nav>
       `;
@@ -143,7 +143,7 @@
               </svg>
             </a>
 
-            <a class="np-mobile-footer-icon np-duck-easteregg" href="${baseUrl}/ente.html" aria-label="Enten-Easteregg öffnen" title="Quak?">
+            <a class="np-mobile-footer-icon np-duck-easteregg" href="${baseUrl}/ente/" aria-label="Enten-Easteregg öffnen" title="Quak?">
               <span aria-hidden="true">🦆</span>
             </a>
           </nav>

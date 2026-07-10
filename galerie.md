@@ -2,7 +2,7 @@
 layout: default
 title: Galerie
 nav_order: 8
-permalink: /galerie.html
+permalink: /galerie/
 ---
 
 <!-- AUTO_UPDATED_START -->

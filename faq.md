@@ -1,12 +1,14 @@
 ---
 title: FAQ
 nav_order: 5
-permalink: /faq.html
+permalink: /faq/
 ---
 
 <!-- AUTO_UPDATED_START -->
 <p class="np-last-updated">Zuletzt aktualisiert: 16.06.2026 21:26 Uhr</p>
 <!-- AUTO_UPDATED_END -->
+
+{% include wip_banner.html %}
 
 <section class="echo-page-box echo-page-box-faq">
   <div class="echo-page-image">
@@ -74,7 +76,7 @@ permalink: /faq.html
       <div>
         <ul>
           <li>Wir stellen euch über den CurseForge Launcher das NewPath Modpack bereit.</li>
-          <li>Sollten sich Fragen ergeben, kannst du in unsere <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a> schauen oder im entsprechenden Discord-Channel nachfragen.</li>
+          <li>Sollten sich Fragen ergeben, kannst du in unsere <a href="{{ site.baseurl }}/modpack-hilfe/">Modpack Hilfe</a> schauen oder im entsprechenden Discord-Channel nachfragen.</li>
         </ul>
       </div>
     </details>
@@ -117,7 +119,7 @@ permalink: /faq.html
       <summary>Mein Spiel stürzt ab, was soll ich tun?</summary>
       <div>
         <p>
-          Schau bitte zuerst in die <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a>.
+          Schau bitte zuerst in die <a href="{{ site.baseurl }}/modpack-hilfe/">Modpack Hilfe</a>.
           Dort werden technische Grundlagen, typische Startprobleme und weitere Hilfethemen gesammelt.
         </p>
       </div>
@@ -130,7 +132,7 @@ permalink: /faq.html
           <li>Streams, Screenshots und Videos über NewPath sind ausdrücklich erlaubt und erwünscht.</li>
           <li>Bitte nenne das Projekt „NewPath – Echoes of the Wild“ oder „NewPath“ als Quelle.</li>
           <li>Öffne ein Ticket und hole dir die Streamerrolle.</li>
-          <li>Weitere Informationen findest du auf der <a href="{{ site.baseurl }}/streamer.html">Streamer-Seite</a>.</li>
+          <li>Weitere Informationen findest du auf der <a href="{{ site.baseurl }}/streamer/">Streamer-Seite</a>.</li>
         </ul>
       </div>
     </details>

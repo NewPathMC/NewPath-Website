@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const isRulePage = document.body.classList.contains("np-page-rules") ||
-    window.location.pathname.endsWith("/regelwerk.html") ||
+    window.location.pathname.endsWith("/regelwerk/") ||
     window.location.pathname.endsWith("/regelwerk");
 
   if (!isRulePage) {
