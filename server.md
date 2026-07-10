@@ -120,57 +120,84 @@ permalink: /server.html
     </div>
   </article>
 
-
   <article class="np-server-dashboard-card np-world-downloads-card" id="welt-downloads">
     <div class="np-world-downloads-head">
       <div>
         <p class="np-card-kicker">Welt-Archiv</p>
-        <h2>Welt-Downloads</h2>
+        <h2>Archivierte Welten</h2>
         <p>
-          Hier werden zukünftig archivierte NewPath-Welten bereitgestellt. Zu jedem Download findest du
-          den passenden Projektstand, das Datum des Weltstands und die benötigte Modpack-Version.
+          Hier werden zukünftig ältere NewPath-Welten als Downloads bereitgestellt.
+          Zu jedem Archiv findest du Projekt, Weltstand und die passende Modpack-Version.
         </p>
       </div>
 
-      <span class="np-world-downloads-status">In Vorbereitung</span>
+      <span class="np-world-downloads-status">Archivbereich</span>
     </div>
 
-    <!-- Vorlage für spätere Welt-Downloads:
-    <article class="np-world-download-item">
-      <div class="np-world-download-main">
-        <h3>Projektname</h3>
-        <p>Kurzer Hinweis zur archivierten Welt.</p>
+    {% assign world_downloads = site.data.world-downloads.items | default: empty %}
+
+    {% if world_downloads.size > 0 %}
+      <div class="np-world-download-list">
+        {% for world in world_downloads %}
+          <article class="np-world-download-item">
+            <div class="np-world-download-main">
+              <span class="np-world-download-project">{{ world.project }}</span>
+              <h3>{{ world.title }}</h3>
+              <p>{{ world.description }}</p>
+            </div>
+
+            <dl class="np-world-download-meta">
+              <div>
+                <dt>Weltstand</dt>
+                <dd>{{ world.world_date }}</dd>
+              </div>
+              <div>
+                <dt>Modpack-Version</dt>
+                <dd>{{ world.modpack_version }}</dd>
+              </div>
+              <div>
+                <dt>Minecraft / NeoForge</dt>
+                <dd>{{ world.minecraft_neoforge }}</dd>
+              </div>
+              <div>
+                <dt>Dateigröße</dt>
+                <dd>{{ world.file_size }}</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>{{ world.status }}</dd>
+              </div>
+            </dl>
+
+            {% if world.download_url and world.available %}
+              <a class="np-world-download-button" href="{{ world.download_url | relative_url }}" download>
+                Welt herunterladen
+              </a>
+            {% else %}
+              <span class="np-world-download-button np-world-download-button-disabled">Download folgt</span>
+            {% endif %}
+          </article>
+        {% endfor %}
       </div>
+    {% else %}
+      <div class="np-world-download-empty">
+        <div class="np-world-download-empty-icon" aria-hidden="true"></div>
+        <div>
+          <h3>Noch keine archivierten Welten verfügbar</h3>
+          <p>
+            Dieser Bereich ist bereits vorbereitet. Sobald ältere NewPath-Welten veröffentlicht werden,
+            erscheinen sie hier mit Weltstand, benötigter Modpack-Version und Download-Link.
+          </p>
+        </div>
+      </div>
+    {% endif %}
 
-      <dl class="np-world-download-meta">
-        <div>
-          <dt>Projekt</dt>
-          <dd>NewPath – Projektname</dd>
-        </div>
-        <div>
-          <dt>Weltstand</dt>
-          <dd>TT.MM.JJJJ</dd>
-        </div>
-        <div>
-          <dt>Benötigte Modpack-Version</dt>
-          <dd>Version</dd>
-        </div>
-        <div>
-          <dt>Minecraft / NeoForge</dt>
-          <dd>Minecraft-Version / NeoForge-Version</dd>
-        </div>
-        <div>
-          <dt>Dateigröße</dt>
-          <dd>folgt</dd>
-        </div>
-        <div>
-          <dt>Status</dt>
-          <dd>Download verfügbar</dd>
-        </div>
-      </dl>
+    <p class="np-world-download-note">
+      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
+      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
+    </p>
+  </article>
 
-      <a class="np-world-download-button" href="#" download>Welt herunterladen</a>
-    </article>
     -->
 
     <div class="np-world-download-list">

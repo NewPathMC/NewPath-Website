@@ -1,0 +1,18 @@
+# Welt-Downloads für die Seite "Server & Welt".
+# Aktuell ist die Liste leer. Dadurch zeigt die Website den vorbereiteten leeren Archivbereich.
+#
+# Später einen Eintrag nach diesem Muster ergänzen:
+#
+# items:
+#   - title: "NewPath – Beyond Lands"
+#     project: "NewPath – Beyond Lands"
+#     description: "Archivierter Weltstand des Beyond-Lands-Projekts."
+#     world_date: "TT.MM.JJJJ"
+#     modpack_version: "NewPath – Beyond Lands x.x.x"
+#     minecraft_neoforge: "Minecraft 1.21.1 / NeoForge x.x.x"
+#     file_size: "folgt"
+#     status: "Download verfügbar"
+#     available: true
+#     download_url: "/assets/downloads/worlds/newpath-beyond-lands.zip"
+
+items: []
