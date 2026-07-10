@@ -123,12 +123,7 @@ permalink: /server.html
   <article class="np-server-dashboard-card np-world-downloads-card" id="welt-downloads">
     <div class="np-world-downloads-head">
       <div>
-        <p class="np-card-kicker">Welt-Archiv</p>
-        <h2>Archivierte Welten</h2>
-        <p>
-          Hier werden zukünftig ältere NewPath-Welten verlinkt. Die Weltdateien liegen nicht im
-          Website-Repo, sondern werden extern bereitgestellt, zum Beispiel über Google Drive.
-        </p>
+        <h2>Welt-Archiv</h2>
       </div>
 
       <span class="np-world-downloads-status">Download-Archiv</span>
