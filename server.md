@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 17:40 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 15:59 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 {% include wip_banner.html %}
@@ -28,7 +28,7 @@ permalink: /server.html
     <h2>Alles Wichtige zum laufenden Serverbetrieb.</h2>
     <p>
       Hier findest du die wichtigsten Informationen zum laufenden Serverbetrieb:
-      Zugang, Versionen, Neustarts und später auch Live-Status oder Weltkarte.
+      Zugang, Versionen, Neustarts, Weltkarte und zukünftig auch archivierte Welt-Downloads.
     </p>
   </div>
 </section>
