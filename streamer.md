@@ -40,13 +40,12 @@ permalink: /streamer.html
       <summary>Als Streamer registrieren</summary>
       <div>
         <p>
-          Wenn du <strong>NewPath</strong> streamst, kannst du dich im Discord als Streamer registrieren lassen.
-          Nach der Freischaltung erhältst du die passende Discord-Rolle und kannst durch
-          <strong>ECHO – Der Wegbegleiter</strong> automatisch angekündigt werden.
+          Wenn du auf <strong>NewPath</strong> streamst, kannst du dich im Discord als Streamer registrieren lassen.
+          Nach der Freischaltung erhältst du die passende Discord-Rolle.
         </p>
 
         <p>
-          Sobald du live bist, kann ECHO deinen Stream in einem vorgesehenen Discord-Channel posten,
+          Sobald du live bist, kann <strong>ECHO</strong> deinen Stream in dem vorgesehenen Discord-Channel posten,
           damit die Community direkt sieht, dass du gerade auf NewPath unterwegs bist.
         </p>
 
@@ -68,7 +67,7 @@ permalink: /streamer.html
               <li>Im Streamtitel muss <strong>NewPath</strong> stehen.</li>
             </ul>
             <p>
-              Wenn eines dieser Kriterien nicht erfüllt ist, wird dein Stream nicht automatisch angekündigt.
+              Wenn eines dieser Kriterien nicht erfüllt ist, wird dein Stream nicht automatisch angekündigt oder aus dem Channel entfernt.
             </p>
           </div>
 
@@ -79,7 +78,6 @@ permalink: /streamer.html
               <li>Öffne ein Support Ticket.</li>
               <li>Teile deinen Twitch-Kanal mit und das du dich als Streamer eintragen lassen möchtest.</li>
               <li>Warte, bis das Team deine Streamerrolle eingerichtet hat.</li>
-              <li>Prüfe vor dem Stream, ob Spiel und Titel korrekt gesetzt sind.</li>
             </ol>
           </div>
         </div>
@@ -87,10 +85,10 @@ permalink: /streamer.html
     </details>
 
     <details class="np-accordion np-faq-details">
-      <summary>Richtlinien & Medienübersicht</summary>
+      <summary>Hinweise</summary>
       <div>
         <p>
-          Wir freuen uns, wenn du <strong>NewPath – Echoes of the Wild</strong> nach außen präsentierst.
+          Wir freuen uns, wenn du <strong>NewPath</strong> nach außen repräsentierst.
           Damit Streams, Videos, Screenshots und Social-Media-Beiträge im Sinne der Community laufen,
           beachte bitte die folgenden Hinweise.
         </p>
@@ -117,7 +115,7 @@ permalink: /streamer.html
           <div class="np-streamer-info-card">
             <h3>Server-Compliance</h3>
             <ul>
-              <li>Keine Modifikationen, Hacks oder Tools im Stream zeigen, die gegen die Serverregeln verstoßen.</li>
+              <li>Keine Modifikationen, Hacks oder Tools im Stream nutzen oder zeigen, die gegen die Serverregeln verstoßen.</li>
               <li>Keine Hinweise, Animationen oder Inhalte nutzen, die zu Regelbrüchen motivieren.</li>
               <li>Nutze bevorzugt die offiziellen NewPath-Grafiken und Vorlagen aus dem Asset-Bereich.</li>
             </ul>
@@ -148,8 +146,7 @@ permalink: /streamer.html
             <h3>Panels</h3>
             <ul>
               <li>Wir stellen verschiedene Panel-Formate bereit.</li>
-              <li>Du kannst frei entscheiden, welche offiziellen Varianten du nutzen möchtest.</li>
-              <li>Bitte verändere die Panel-Grafiken nicht eigenständig.</li>
+              <li>Du kannst frei entscheiden, ob oder welche offiziellen Varianten du nutzen möchtest.</li>
             </ul>
           </div>
 
@@ -168,12 +165,12 @@ permalink: /streamer.html
               was NewPath ist und wo sie weitere Informationen finden.
             </p>
 
-            <pre><code>!newpath / !mitspielen / !server
+            <pre>!newpath / !mitspielen / !server
 
 Ich spiele gerade NewPath – Echoes of the Wild.
 Ein Community-Server mit eigenem Modpack.
 Wenn du Interesse hast mitzuspielen, schau dir den Discord der Community an:
-https://discord.gg/R4HwKRbZ5e</code></pre>
+https://discord.gg/R4HwKRbZ5e</pre>
           </div>
 
           <div class="np-streamer-info-card">
@@ -186,15 +183,6 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
                 https://discord.gg/R4HwKRbZ5e
               </a>
             </p>
-          </div>
-
-          <div class="np-streamer-info-card">
-            <h3>Medien & Vorlagen</h3>
-            <ul>
-              <li>Alle bereitgestellten Grafiken, Panels, Logos und QR-Codes stehen freiwillig zur Nutzung bereit.</li>
-              <li>Das NewPath-Logo darf nicht verändert werden.</li>
-              <li>Keine Farbänderungen, Verzerrungen oder eigenen Abwandlungen der offiziellen Assets.</li>
-            </ul>
           </div>
         </div>
       </div>
