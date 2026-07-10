@@ -17466,7 +17466,7 @@ body.np-page-home .np-back-to-top {
     linear-gradient(135deg, rgba(255, 255, 255, 0.26), transparent 28%),
     repeating-linear-gradient(
       -45deg,
-      rgba(10, 8, 5, 0.16) 0 0.62rem,
+      rgba(10, 8, 5, 0.075) 0 0.62rem,
       transparent 0.62rem 1.24rem
     ),
     linear-gradient(180deg, #f6c84a, #d99b24);
@@ -17482,14 +17482,14 @@ body.np-page-home .np-back-to-top {
   left: 0;
   right: 0;
   z-index: -1;
-  height: 0.42rem;
+  height: 0.34rem;
   background:
     repeating-linear-gradient(
       45deg,
-      #15100a 0 0.7rem,
-      #15100a 0.7rem 1.4rem,
-      #f3c13f 1.4rem 2.1rem,
-      #f3c13f 2.1rem 2.8rem
+      rgba(21, 16, 10, 0.88) 0 0.62rem,
+      rgba(21, 16, 10, 0.88) 0.62rem 1.24rem,
+      rgba(243, 193, 63, 0.82) 1.24rem 1.86rem,
+      rgba(243, 193, 63, 0.82) 1.86rem 2.48rem
     );
 }
 
@@ -17505,7 +17505,7 @@ body.np-page-home .np-back-to-top {
   position: absolute;
   inset: 0;
   z-index: -2;
-  opacity: 0.20;
+  opacity: 0.13;
   background:
     radial-gradient(circle at 12% 50%, rgba(255, 255, 255, 0.42), transparent 10rem),
     radial-gradient(circle at 95% 20%, rgba(0, 230, 246, 0.24), transparent 8rem);
@@ -17522,7 +17522,7 @@ body.np-page-home .np-back-to-top {
   color: #f5bf35;
   background: #15100a;
   box-shadow:
-    0 0 0 3px rgba(255, 240, 149, 0.28),
+    0 0 0 3px rgba(255, 240, 149, 0.20),
     0 8px 18px rgba(0, 0, 0, 0.22);
   font-family: var(--np-font-label, system-ui, sans-serif);
   font-size: clamp(1.18rem, 1.7vw, 1.55rem);
@@ -17540,9 +17540,9 @@ body.np-page-home .np-back-to-top {
   margin: 0 0 0.18rem;
   color: #130f09 !important;
   font-family: var(--np-font-label, system-ui, sans-serif);
-  font-size: clamp(1.05rem, 1.45vw, 1.42rem);
+  font-size: clamp(1rem, 1.28vw, 1.28rem);
   font-weight: 950;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.045em;
   line-height: 1.05;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(255, 245, 180, 0.36);
@@ -17551,9 +17551,9 @@ body.np-page-home .np-back-to-top {
 .np-wip-banner-content p {
   max-width: 58rem;
   margin: 0 auto;
-  color: #15100a !important;
-  font-size: clamp(0.78rem, 0.92vw, 0.95rem);
-  font-weight: 800;
+  color: #100b05 !important;
+  font-size: clamp(0.78rem, 0.9vw, 0.92rem);
+  font-weight: 850;
   line-height: 1.42;
 }
 
@@ -17573,7 +17573,7 @@ body.np-page-home .np-back-to-top {
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
 }
 
 @media (max-width: 42rem) {
