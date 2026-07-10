@@ -126,25 +126,32 @@ permalink: /server.html
         <p class="np-card-kicker">Welt-Archiv</p>
         <h2>Archivierte Welten</h2>
         <p>
-          Hier werden zukünftig ältere NewPath-Welten als Downloads bereitgestellt.
-          Zu jedem Archiv findest du Projekt, Weltstand und die passende Modpack-Version.
+          Hier werden zukünftig ältere NewPath-Welten verlinkt. Die Weltdateien liegen nicht im
+          Website-Repo, sondern werden extern bereitgestellt, zum Beispiel über Google Drive.
         </p>
       </div>
 
-      <span class="np-world-downloads-status">Archivbereich</span>
+      <span class="np-world-downloads-status">Download-Archiv</span>
     </div>
 
-    {% assign world_downloads = site.data.world-downloads.items | default: empty %}
+    {% assign world_downloads = site.data["world-downloads"].items | default: empty %}
 
     {% if world_downloads.size > 0 %}
       <div class="np-world-download-list">
         {% for world in world_downloads %}
-          <article class="np-world-download-item">
-            <div class="np-world-download-main">
-              <span class="np-world-download-project">{{ world.project }}</span>
-              <h3>{{ world.title }}</h3>
-              <p>{{ world.description }}</p>
+          <article class="np-world-download-card">
+            <div class="np-world-download-card-head">
+              <div>
+                <p class="np-card-kicker">{{ world.project }}</p>
+                <h3>{{ world.title }}</h3>
+              </div>
+
+              <span class="np-world-download-source">
+                {{ world.host | default: "Externer Download" }}
+              </span>
             </div>
+
+            <p class="np-world-download-description">{{ world.description }}</p>
 
             <dl class="np-world-download-meta">
               <div>
@@ -169,14 +176,39 @@ permalink: /server.html
               </div>
             </dl>
 
-            {% if world.download_url and world.available %}
-              <a class="np-world-download-button" href="{{ world.download_url | relative_url }}" download>
-                Welt herunterladen
-              </a>
-            {% else %}
-              <span class="np-world-download-button np-world-download-button-disabled">Download folgt</span>
-            {% endif %}
+            <div class="np-world-download-actions">
+              {% if world.download_url and world.available %}
+                <a
+                  class="np-world-download-button"
+                  href="{{ world.download_url }}"
+                  target="_blank"
+                  rel="noopener">
+                  {{ world.button_label | default: "Download öffnen" }}
+                </a>
+              {% else %}
+                <span class="np-world-download-button np-world-download-button-disabled">Download folgt</span>
+              {% endif %}
+            </div>
           </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="np-world-download-empty">
+        <p class="np-card-kicker">Noch leer</p>
+        <h3>Noch keine Welt-Downloads eingetragen</h3>
+        <p>
+          Der Archivbereich ist vorbereitet. Sobald eine alte NewPath-Welt veröffentlicht wird,
+          erscheint sie hier als Download-Karte mit Projektstand, benötigter Modpack-Version und externem Link.
+        </p>
+      </div>
+    {% endif %}
+
+    <p class="np-world-download-note">
+      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
+      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
+    </p>
+  </article>
+
         {% endfor %}
       </div>
     {% else %}

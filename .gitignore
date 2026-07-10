@@ -1,2 +1,7 @@
 # Lokale Vorlage zum Zurücksetzen der Regelwerksänderungen
 assets/data/rule-changes.blank.local.json
+
+# Große Welt-Downloads nicht ins Website-Repo committen
+assets/downloads/worlds/*.zip
+assets/downloads/worlds/*.7z
+assets/downloads/worlds/*.rar

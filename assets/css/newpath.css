@@ -17605,7 +17605,7 @@ body.np-page-home .np-back-to-top {
 .np-world-downloads-card {
   display: grid;
   gap: clamp(1rem, 1.7vw, 1.35rem);
-  margin-top: clamp(1.35rem, 2.2vw, 2rem);
+  margin-top: clamp(1.45rem, 2.4vw, 2.2rem);
   overflow: hidden;
 }
 
@@ -17625,14 +17625,15 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-downloads-head p:not(.np-card-kicker) {
-  max-width: 58rem;
+  max-width: 60rem;
   margin: 0;
   color: var(--np-type-body, rgba(245, 234, 220, 0.84));
   font-size: clamp(0.86rem, 0.96vw, 0.98rem);
   line-height: 1.55;
 }
 
-.np-world-downloads-status {
+.np-world-downloads-status,
+.np-world-download-source {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -17656,11 +17657,9 @@ body.np-page-home .np-back-to-top {
   gap: 0.95rem;
 }
 
-.np-world-download-item {
+.np-world-download-card {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.95fr) minmax(0, 1.35fr) auto;
-  gap: clamp(0.9rem, 1.55vw, 1.2rem);
-  align-items: center;
+  gap: 0.9rem;
   padding: clamp(1rem, 1.5vw, 1.22rem);
   border: 1px solid rgba(72, 122, 146, 0.36);
   border-radius: 0.72rem;
@@ -17670,32 +17669,29 @@ body.np-page-home .np-back-to-top {
   box-shadow: inset 0 0 24px rgba(0, 230, 246, 0.025);
 }
 
-.np-world-download-project {
-  display: inline-flex;
-  margin: 0 0 0.35rem;
-  color: var(--np-cyan, #00e6f6);
-  font-family: var(--np-font-label);
-  font-size: 0.62rem;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.np-world-download-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.9rem;
 }
 
-.np-world-download-main h3,
+.np-world-download-card h3,
 .np-world-download-empty h3 {
-  margin: 0 0 0.35rem;
+  margin: 0;
   color: var(--np-gold-soft, #ecb76e);
   font-family: var(--np-font-heading);
-  font-size: clamp(1.08rem, 1.22vw, 1.3rem);
+  font-size: clamp(1.1rem, 1.28vw, 1.36rem);
   line-height: 1.12;
 }
 
-.np-world-download-main p,
+.np-world-download-description,
 .np-world-download-empty p {
+  max-width: 64rem;
   margin: 0;
-  color: rgba(245, 234, 220, 0.78);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  color: rgba(245, 234, 220, 0.80);
+  font-size: 0.9rem;
+  line-height: 1.52;
 }
 
 .np-world-download-meta {
@@ -17732,43 +17728,18 @@ body.np-page-home .np-back-to-top {
   line-height: 1.25;
 }
 
-.np-world-download-empty {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(0.8rem, 1.5vw, 1.1rem);
-  align-items: center;
-  min-height: 9.5rem;
-  padding: clamp(1.05rem, 1.75vw, 1.4rem);
-  border: 1px dashed rgba(0, 230, 246, 0.30);
-  border-radius: 0.72rem;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.10), transparent 13rem),
-    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.08), transparent 12rem),
-    linear-gradient(180deg, rgba(9, 34, 44, 0.58), rgba(2, 13, 20, 0.86));
-}
-
-.np-world-download-empty-icon {
-  width: clamp(2.7rem, 4vw, 3.5rem);
-  height: clamp(2.7rem, 4vw, 3.5rem);
-  border: 1px solid rgba(0, 230, 246, 0.36);
-  border-radius: 0.75rem;
-  background:
-    linear-gradient(90deg, transparent 44%, rgba(0, 230, 246, 0.68) 44% 56%, transparent 56%),
-    linear-gradient(0deg, transparent 44%, rgba(0, 230, 246, 0.68) 44% 56%, transparent 56%),
-    radial-gradient(circle, rgba(0, 230, 246, 0.16), rgba(0, 9, 15, 0.62));
-  box-shadow:
-    0 0 22px rgba(0, 230, 246, 0.12),
-    inset 0 0 18px rgba(0, 230, 246, 0.08);
+.np-world-download-actions {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .np-world-download-button {
-  justify-self: end;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 2.35rem;
-  padding: 0.55rem 0.82rem;
-  border: 1px solid rgba(0, 230, 246, 0.34);
+  padding: 0.55rem 0.86rem;
+  border: 1px solid rgba(0, 230, 246, 0.36);
   border-radius: 999px;
   color: var(--np-cyan, #00e6f6);
   background: rgba(0, 230, 246, 0.08);
@@ -17793,6 +17764,19 @@ body.np-page-home .np-back-to-top {
   filter: saturate(0.75);
 }
 
+.np-world-download-empty {
+  display: grid;
+  gap: 0.38rem;
+  min-height: 8rem;
+  padding: clamp(1.05rem, 1.75vw, 1.4rem);
+  border: 1px dashed rgba(0, 230, 246, 0.30);
+  border-radius: 0.72rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.10), transparent 13rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.08), transparent 12rem),
+    linear-gradient(180deg, rgba(9, 34, 44, 0.58), rgba(2, 13, 20, 0.86));
+}
+
 .np-world-download-note {
   margin: 0;
   padding: 0.72rem 0.85rem;
@@ -17805,30 +17789,24 @@ body.np-page-home .np-back-to-top {
 }
 
 @media (max-width: 92rem) {
-  .np-world-download-item {
-    grid-template-columns: 1fr;
-  }
-
   .np-world-download-meta {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .np-world-download-button {
-    justify-self: start;
+  .np-world-download-actions {
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 46rem) {
-  .np-world-downloads-head {
+  .np-world-downloads-head,
+  .np-world-download-card-head {
     display: grid;
   }
 
-  .np-world-downloads-status {
+  .np-world-downloads-status,
+  .np-world-download-source {
     justify-self: start;
-  }
-
-  .np-world-download-empty {
-    grid-template-columns: 1fr;
   }
 
   .np-world-download-meta {
