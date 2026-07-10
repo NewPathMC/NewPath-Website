@@ -208,27 +208,6 @@ permalink: /server.html
       damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
     </p>
   </article>
-
-        {% endfor %}
-      </div>
-    {% else %}
-      <div class="np-world-download-empty">
-        <div class="np-world-download-empty-icon" aria-hidden="true"></div>
-        <div>
-          <h3>Noch keine archivierten Welten verfügbar</h3>
-          <p>
-            Dieser Bereich ist bereits vorbereitet. Sobald ältere NewPath-Welten veröffentlicht werden,
-            erscheinen sie hier mit Weltstand, benötigter Modpack-Version und Download-Link.
-          </p>
-        </div>
-      </div>
-    {% endif %}
-
-    <p class="np-world-download-note">
-      Hinweis: Archivierte Welten sollten immer mit der angegebenen Modpack-Version geöffnet werden,
-      damit fehlende Mods, Blöcke oder Weltgenerierungsdaten vermieden werden.
-    </p>
-  </article>
 </section>
 
 <script src="{{ site.baseurl }}/assets/js/np-server-status.js" defer></script>
