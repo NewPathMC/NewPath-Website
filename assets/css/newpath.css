@@ -17668,12 +17668,12 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-download-card {
-  width: min(100%, 50rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  width: min(100%, 43rem) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
   grid-template-areas:
     "head action"
-    "meta meta";
+    "meta meta" !important;
   gap: 0.9rem 1rem;
   align-items: center;
   padding: clamp(1rem, 1.5vw, 1.22rem);
@@ -17689,7 +17689,7 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-download-card-head {
-  grid-area: head;
+  grid-area: head !important;
   min-width: 0;
 }
 
@@ -17703,15 +17703,21 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-download-meta {
-  grid-area: meta;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(10.5rem, 13.75rem));
-  gap: 0.55rem;
-  margin: 0;
+  grid-area: meta !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 12rem) !important;
+  justify-content: start !important;
+  align-items: stretch !important;
+  gap: 0.55rem !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  margin: 0 !important;
 }
 
 .np-world-download-meta div {
-  min-width: 0;
+  width: 12rem !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
   padding: 0.62rem 0.68rem;
   border: 1px solid rgba(64, 116, 138, 0.34);
   border-radius: 0.54rem;
@@ -17742,7 +17748,7 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-download-actions {
-  grid-area: action;
+  grid-area: action !important;
   display: flex;
   justify-content: flex-end;
 }
@@ -17801,16 +17807,25 @@ body.np-page-home .np-back-to-top {
 
 @media (max-width: 58rem) {
   .np-world-download-card {
-    width: 100%;
-    grid-template-columns: 1fr;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
     grid-template-areas:
       "head"
       "meta"
-      "action";
+      "action" !important;
   }
 
   .np-world-download-actions {
     justify-content: flex-start;
+  }
+
+  .np-world-download-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .np-world-download-meta div {
+    width: auto !important;
   }
 }
 
@@ -17824,6 +17839,6 @@ body.np-page-home .np-back-to-top {
   }
 
   .np-world-download-meta {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
