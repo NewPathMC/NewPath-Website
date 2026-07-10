@@ -17975,3 +17975,226 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* 96. Website-Release-Gate */
+
+body.np-website-release-page {
+  min-height: 100vh;
+  margin: 0;
+  color: rgba(245, 234, 220, 0.92);
+  background:
+    linear-gradient(180deg, rgba(0, 12, 18, 0.55), rgba(0, 8, 14, 0.88)),
+    var(--np-bg-image, none),
+    #020a0f;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: var(--np-font-body, system-ui, sans-serif);
+}
+
+.np-website-release-shell {
+  min-height: 100vh;
+  width: min(100% - 2rem, 76rem);
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+.np-website-release-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(12rem, 22rem) minmax(0, 1fr);
+  gap: clamp(1.4rem, 3vw, 3rem);
+  align-items: center;
+  padding: clamp(1.2rem, 2.4vw, 2.1rem);
+  border: 1px solid rgba(0, 230, 246, 0.30);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.14), transparent 20rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.10), transparent 18rem),
+    linear-gradient(180deg, rgba(4, 22, 30, 0.84), rgba(0, 8, 14, 0.92));
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.44),
+    inset 0 0 40px rgba(0, 230, 246, 0.035);
+  overflow: hidden;
+}
+
+.np-website-release-logo {
+  display: grid;
+  place-items: center;
+}
+
+.np-website-release-logo img {
+  width: min(100%, 20rem);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.40));
+}
+
+.np-website-release-content {
+  display: grid;
+  gap: clamp(0.72rem, 1.25vw, 1rem);
+}
+
+.np-website-release-kicker {
+  margin: 0;
+  color: var(--np-cyan, #00e6f6);
+  font-family: var(--np-font-label, system-ui, sans-serif);
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.np-website-release-content h1 {
+  margin: 0;
+  color: var(--np-gold-soft, #ecb76e);
+  font-family: var(--np-font-heading, Georgia, serif);
+  font-size: clamp(2.35rem, 5vw, 4.6rem);
+  font-weight: 950;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.60);
+}
+
+.np-website-release-subtitle {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.96);
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.np-website-release-description {
+  max-width: 48rem;
+  margin: 0;
+  color: rgba(245, 234, 220, 0.74);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.np-website-release-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  max-width: 42rem;
+  margin-top: 0.15rem;
+}
+
+.np-website-release-countdown-grid span {
+  display: grid;
+  gap: 0.16rem;
+  min-height: 5rem;
+  place-items: center;
+  padding: 0.75rem 0.48rem;
+  border: 1px solid rgba(72, 122, 146, 0.42);
+  border-radius: 0.65rem;
+  background: rgba(0, 9, 15, 0.34);
+}
+
+.np-website-release-countdown-grid strong {
+  color: rgba(245, 234, 220, 0.98);
+  font-family: var(--np-font-heading, Georgia, serif);
+  font-size: clamp(1.55rem, 3.4vw, 2.6rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+.np-website-release-countdown-grid small {
+  color: rgba(0, 230, 246, 0.90);
+  font-family: var(--np-font-label, system-ui, sans-serif);
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.np-website-release-soon {
+  display: none;
+  max-width: 24rem;
+  margin: 0.2rem 0 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(72, 122, 146, 0.42);
+  border-radius: 0.65rem;
+  color: rgba(245, 234, 220, 0.98);
+  background: rgba(0, 9, 15, 0.34);
+  font-family: var(--np-font-heading, Georgia, serif);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 950;
+  line-height: 1;
+  text-align: center;
+}
+
+.np-website-release-card.is-waiting .np-website-release-countdown-grid {
+  display: none;
+}
+
+.np-website-release-card.is-waiting .np-website-release-soon {
+  display: block;
+}
+
+.np-website-release-date {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.68);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.np-website-release-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.np-website-release-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.55rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(0, 230, 246, 0.42);
+  border-radius: 999px;
+  color: var(--np-cyan, #00e6f6);
+  background: rgba(0, 230, 246, 0.10);
+  font-family: var(--np-font-label, system-ui, sans-serif);
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.055em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.np-website-release-actions a:hover {
+  color: #f2ffff;
+  border-color: rgba(0, 230, 246, 0.68);
+  background: rgba(0, 230, 246, 0.16);
+}
+
+.np-website-release-card.is-finished {
+  border-color: rgba(236, 183, 110, 0.45);
+}
+
+@media (max-width: 56rem) {
+  .np-website-release-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .np-website-release-countdown-grid,
+  .np-website-release-soon {
+    margin-inline: auto;
+  }
+
+  .np-website-release-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 34rem) {
+  .np-website-release-countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

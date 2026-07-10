@@ -1,0 +1,12 @@
+{% assign website_release = site.data["website-release"] %}
+{% if website_release.enabled %}
+<div
+  id="np-website-release-gate-config"
+  data-np-website-release-config
+  data-np-website-release-target="{{ website_release.target_date }}"
+  data-np-website-release-countdown-path="{{ website_release.countdown_path | relative_url }}"
+  data-np-website-release-home-path="{{ website_release.home_path | relative_url }}"
+  hidden>
+</div>
+<script src="{{ site.baseurl }}/assets/js/np-website-release-gate.js" defer></script>
+{% endif %}
