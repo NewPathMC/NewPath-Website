@@ -17668,6 +17668,7 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-world-download-card {
+  max-width: 58rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
@@ -17704,8 +17705,9 @@ body.np-page-home .np-back-to-top {
 .np-world-download-meta {
   grid-area: meta;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(8.6rem, 1fr));
   gap: 0.55rem;
+  max-width: 45rem;
   margin: 0;
 }
 
@@ -17798,7 +17800,18 @@ body.np-page-home .np-back-to-top {
   line-height: 1.52;
 }
 
-@media (max-width: 78rem) {
+@media (max-width: 86rem) {
+  .np-world-download-card {
+    max-width: none;
+  }
+
+  .np-world-download-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+  }
+}
+
+@media (max-width: 58rem) {
   .np-world-download-card {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -17809,10 +17822,6 @@ body.np-page-home .np-back-to-top {
 
   .np-world-download-actions {
     justify-content: flex-start;
-  }
-
-  .np-world-download-meta {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
