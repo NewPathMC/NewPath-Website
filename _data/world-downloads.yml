@@ -19,10 +19,10 @@
 
 items:
   - title: "SunPath - Sommerprojekt 2026"
-    world_date: "10.07.2026"
-    modpack_version: "SunPath v.1.9"
-    file_size: "7,4 GB"
+    world_date: "N/A"
+    modpack_version: "N/A"
+    file_size: "N/A"
     status: "Download verfügbar"
-    available: true
+    available: false
     button_label: "Welt herunterladen"
     download_url: "https://drive.google.com/file/d/1Qi6b6P9gUqxqiAGjFtynR8jf4L-PGlq7/view?usp=drive_link"
