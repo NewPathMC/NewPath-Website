@@ -56,6 +56,20 @@
 <script src="{{ site.baseurl }}/assets/js/np-main-theme.js" defer></script>
 
 {% if jekyll.environment == "production" %}
-<script data-goatcounter="https://m4ximum.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+<!-- GoatCounter Analytics -->
+<script
+  data-goatcounter="https://m4ximum.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script
+  type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"cfd8266d8a8449de9336581785cec94c"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+
 {% endif %}
