@@ -87,6 +87,7 @@ permalink: /team/
       </p>
     </article>
 
+<!--
     <article class="np-info-card np-team-card">
       <div class="np-card-media np-team-image">
         <img
@@ -103,5 +104,6 @@ permalink: /team/
         Bietet Support auf allerhöchstem Niveau, glaubt er selbst.
       </p>
     </article>
+-->
   </div>
 </section>
