@@ -100,7 +100,7 @@ permalink: /server/
       <div>
         <h2>Live-Weltkarte</h2>
         <p>
-          Die BlueMap zeigt die aktuelle NewPath-Welt direkt im Browser. Du kannst die Karte bewegen,
+          Die BlueMap zeigt die aktuelle NewPath-Oberwelt direkt im Browser. Du kannst die Karte bewegen,
           zoomen und die BlueMap-Funktionen innerhalb der eingebetteten Ansicht nutzen.
         </p>
       </div>
@@ -108,6 +108,13 @@ permalink: /server/
       <a class="np-bluemap-open" href="https://map.newpath-mc.de" target="_blank" rel="noopener">
         Karte im Vollbild öffnen
       </a>
+    </div>
+
+    <div class="np-bluemap-note" role="note" aria-label="Hinweis zur Kartenaktualisierung">
+      <strong>Hinweis:</strong>
+      Die Karte zeigt ausschließlich die Oberwelt. Neue und veränderte Bereiche werden automatisch übernommen,
+      können aber mit einigen Minuten Verzögerung erscheinen. Klicke links im BlueMap-Menü auf
+      <strong>„Karte aktualisieren“</strong>, um den neuesten Kartenstand zu laden.
     </div>
 
     <div class="np-bluemap-frame">
