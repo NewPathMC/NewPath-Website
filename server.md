@@ -9,7 +9,6 @@ permalink: /server/
 <p class="np-last-updated">Zuletzt aktualisiert: 23.07.2026 20:37 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
-{% include wip_banner.html %}
 
 
 <section class="echo-page-box echo-page-box-server">
