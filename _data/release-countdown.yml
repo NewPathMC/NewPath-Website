@@ -9,7 +9,7 @@
 
 enabled: true
 title: "Serverstart"
-target_date: "2026-08-0518:00:00+02:00"
+target_date: "2026-08-05T18:00:00+02:00"
 date_label: "seit alle dabei!"
 no_date_label: ""
 done_label: "Echoes of the Wild ist gestartet"
