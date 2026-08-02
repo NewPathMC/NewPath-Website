@@ -8,7 +8,7 @@ permalink: /faq/
 <p class="np-last-updated">Zuletzt aktualisiert: 10.07.2026 20:20 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
-{% include wip_banner.html %}
+
 
 <section class="echo-page-box echo-page-box-faq">
   <div class="echo-page-image">
