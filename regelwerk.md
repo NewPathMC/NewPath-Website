@@ -136,7 +136,7 @@ permalink: /regelwerk/
       <h2>3. Claims</h2>
     </header>
     <ol class="np-rule-list">
-      <li><strong>3.1.</strong> Man kann max. 150 Claims pro Spieler oder Team in Anspruch nehmen. Darüber hinaus darf trotzdem gebaut werden.</li>
+      <li><strong>3.1.</strong> Man kann max. 200 Claims pro Spieler oder Team in Anspruch nehmen. Darüber hinaus darf trotzdem gebaut werden.</li>
       <li><strong>3.2.</strong> Verbotene Claim-Nutzung: Lootstrukturen für andere blockieren, andere Teams einkreisen, Spawn blockieren oder öffentliche Bereiche beanspruchen.</li>
       <li><strong>3.3.</strong> Erlaubt ist maximal ein Claim-Gebiet pro Spieler oder Team.</li>
       <li class="np-rule-subitem"><strong>3.3.1.</strong> Verlassene Grundstücke sind in einem angemessenen Zustand zu hinterlassen.</li>
