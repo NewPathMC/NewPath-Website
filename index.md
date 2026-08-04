@@ -41,11 +41,6 @@ permalink: /
       height="512"
       decoding="async">
   </div>
-
-  <div class="np-hero-release-countdown-slot">
-    {% include release_countdown.html %}
-  </div>
-
 </section>
 
 <section class="np-status-bar np-status-bar-v2 np-status-bar-showcase" aria-label="NewPath Kurzinfos">
