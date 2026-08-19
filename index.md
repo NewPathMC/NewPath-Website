@@ -349,7 +349,7 @@ permalink: /
   </div>
 
   <div class="np-ecosystem-grid" aria-label="NewPath Ecosystem Übersicht">
-    <a class="np-ecosystem-card np-ecosystem-card-featured" href="https://www.curseforge.com/minecraft/modpacks/frostpath-winterproject-2025" target="_blank" rel="noopener">
+    <a class="np-ecosystem-card np-ecosystem-card-featured" href="https://www.curseforge.com/minecraft/modpacks/newpath-echoes-of-the-wild" target="_blank" rel="noopener">
       <img src="{{ site.baseurl }}/assets/images/ecosystem/newpath-eotw.png" alt="NewPath – Echoes of the Wild Logo" loading="lazy" decoding="async">
       <span class="np-ecosystem-type">Aktuelles Hauptprojekt</span>
       <strong>NewPath – Echoes of the Wild</strong>
