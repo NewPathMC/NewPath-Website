@@ -88,7 +88,7 @@ permalink: /modpack-hilfe/
         <!-- WICHTIGE HINWEISE -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Für NewPath empfehlen wir mindestens 10 GB RAM.</p>
+          <p>Für NewPath empfehlen wir mindestens 12 GB RAM.</p>
         </div>
 
         <!-- INHALT / ANLEITUNG -->
